@@ -303,6 +303,8 @@ class CalibMode():
             frame_id += 1 
             key = cv2.waitKey(1)
             if key == 27: break
+            if not ok:
+                break
         cap.release()
         cv2.destroyAllWindows() 
         return result
